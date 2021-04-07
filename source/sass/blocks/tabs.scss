@@ -1,0 +1,315 @@
+.tabs {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 150px;
+  overflow: hidden;
+
+  @include tablet {
+    padding-top: 30px;
+    margin-bottom: 62px;
+  }
+
+  @include mobile {
+    padding-top: 0;
+  }
+}
+
+.tabs__list {
+  width: 902px;
+  position: relative;
+  display: flex;
+  column-gap: 40px;
+  margin-left: 19.5%;
+  margin-right: auto;
+  border-bottom: 1px solid $text-dark-03;
+
+  @media (max-width: 1475px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include tablet {
+    margin-left: 37px;
+    margin-bottom: 10px;
+  }
+
+  @include mobile {
+    margin-left: 15px;
+  }
+}
+
+.tabs__list-item {
+  margin-right: 60px;
+  padding-bottom: 10px;
+}
+
+.tabs__list-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: $medium;
+  letter-spacing: -0.41px;
+  color: $text-dark-03;
+
+  &:hover,
+  &:focus {
+      color: $primary-orange;
+      opacity: 1;
+  }
+}
+
+.tabs__wrapper {
+  width: 61%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 1230px) {
+    width: 80%;
+    margin-left: 3%;
+  }
+
+  @include tablet {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.tabs__card {
+  display: none;
+
+  &--active {
+    width: 100%;
+    min-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    padding-bottom: 10px;
+  }
+
+  @include tablet {
+    min-width: 320px;
+    flex-direction: column;
+    padding-top: 23px;
+  }
+
+  @include mobile {
+    padding-top: 14px;
+    padding-bottom: 30px;
+  }
+}
+
+.tabs__description {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 8.1%;
+  padding-top: 10px;
+
+  @include tablet {
+    width: 95%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  @include mobile {
+    width: 92%;
+    padding-bottom: 20px;
+  }
+}
+
+.tabs__description-title {
+  font-weight: $semi-bold;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.245px;
+  color: $primary-black;
+  margin-bottom: 30px;
+
+  @include tablet {
+    font-weight: $semi-bold;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 46.8%;
+    height: 4px;
+    margin-top: 13px;
+    background-color: $primary-orange;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.tabs__description-text {
+  max-height: 600px;
+  margin-bottom: 49px;
+  letter-spacing: -0.47px;
+  color: $primary-black;
+
+  @include tablet {
+    margin-bottom: 19px;
+    text-align: center;
+  }
+}
+
+.tabs__review-wrapper {
+  width: 36.7%;
+  display: flex;
+  position: relative;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.tabs__photo {
+  height: 100%;
+  flex-grow: 1;
+  line-height: 0;
+
+  @include tablet {
+    max-height: 415px;
+  }
+
+  & img {
+    width: 100%;
+    min-width: 430px;
+    object-fit: cover;
+    height: 595px;
+
+    @include tablet {
+      min-width: auto;
+      height: 100%;
+    }
+  }
+}
+
+.tabs__review {
+  position: absolute;
+  top: 106px;
+  left: 75%;
+  width: 382px;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 29px 30px 30px;
+
+  @include tablet {
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 30px;
+  }
+
+  @include mobile {
+    width: 270px;
+    top: 50px;
+    padding-top: 32px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+}
+
+.tabs__review-title {
+  font-weight: $medium;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.69px;
+  color: $primary-black;
+  margin-bottom: 20px;
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 21%;
+    height: 2px;
+    background-color: $primary-orange;
+    margin-top: 11px;
+
+    @include mobile {
+      width: 30.5%;
+      height: 1px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.tabs__review-item {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs__review-text {
+  max-height: 250px;
+  font-size: 14px;
+  letter-spacing: -0.4083px;
+  color: $text-dark-07;
+  margin-bottom: 31px;
+  overflow: scroll;
+
+  @include mobile {
+    text-align: center;
+    margin-bottom: 17px;
+  }
+}
+
+.tabs__author {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1px;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 6px;
+  }
+
+  & img {
+    margin-right: 15px;
+
+    @include mobile {
+      margin-right: 8px;
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.tabs__name-author {
+  font-weight: $medium;
+  font-size: $font-size;
+  line-height: 19px;
+  font-style: normal;
+  letter-spacing: -0.47px;
+}

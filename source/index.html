@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
-  <header class="page__header header js-header">
+  <header class="page__header header js-header" id="header">
     <div class="header__wrapper">
       <div class="header__top">
         <a class="header__logo">
@@ -27,13 +27,16 @@
       </div>
       <div class="header__container header__container--nojs js-menu">
         <button class="button-cross js-button-close" type="button" aria-label="Закрыть меню"></button>
-        <nav class="nav">
+        <nav class="nav" id="nav-bar">
           <ul class="nav__list list">
             <li class="nav__item">
-              <a class="nav__link" href="#places">О&nbsp;путешествии</a>
+              <a class="nav__link nav-link" href="#feedback">Отзывы</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#prices">Цены</a>
+              <a class="nav__link nav-link" href="#places">О&nbsp;путешествии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav-link" href="#prices">Цены</a>
             </li>
           </ul>
         </nav>
@@ -415,7 +418,7 @@
         </div>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="feedback__wrapper">
         <div class="feedback__photo">
           <picture>
@@ -428,16 +431,16 @@
         <div class="feedback__inner-wrapper">
           <h2 class="feedback__title title">У Вас остались вопросы?</h2>
           <p class="feedback__text text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <form action="https://echo.htmlacademy.ru" method="get" class="feedback__form form">
+          <form action="https://www.freecodecamp.com/email-submit" method="get" class="feedback__form form" id="form">
             <label class="form__label form__label--phone" for="mobile" aria-label="Введите номер мобильного телефона">
               <input class="form__input" id="mobile" type="text" placeholder="Введите 10 цифр номера" required>
               <span class="form__error visually-hidden">Данные не верны</span>
             </label>
             <label class="form__label" for="email" aria-label="Введите e-mail">
-              <input class="form__input form__input--email" id="email" type="text" placeholder="E-mail">
+              <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="E-mail">
               <span class="form__error visually-hidden">Данные не верны</span>
             </label>
-            <button class="form__button button button--submit" type="submit">отправить</button>
+            <input class="form__button button button--submit" type="submit" id="submit">отправить</>
           </form>
         </div>
       </div>
@@ -560,5 +563,6 @@
   </div>
 
   <script src="js/script.min.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>

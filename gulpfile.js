@@ -13,6 +13,7 @@ const del = require("del");
 const jsmin = require("gulp-jsmin");
 const htmlmin = require("gulp-htmlmin");
 const csso = require("gulp-csso");
+const ghpages = require('gh-pages');
 
 // Styles
 
@@ -138,6 +139,10 @@ const build = gulp.series(
 );
 
 exports. build = build;
+
+gulp.task('deploy', function (cb) {
+  ghpages.publish("build", cb);
+});
 
 // Watcher
 

@@ -22,6 +22,7 @@
           <svg width="57" height="22">
             <use xlink:href="img/sprite.svg#icon-logo"></use>
           </svg>
+          <img src="" id="header-img" class="visually-hidden">
         </a>
         <button class="button-burger js-button-open" type="button" aria-label="Открыть меню"></button>
       </div>
@@ -421,12 +422,14 @@
     <section class="feedback" id="feedback">
       <div class="feedback__wrapper">
         <div class="feedback__photo">
-          <picture>
-            <source type="image/webp" media="(min-width:1024px)" srcset="img/bg-question-desktop@1x.webp 1x, img/bg-question-desktop@2x.webp 2x">
-            <source type="image/webp" srcset="img/bg-question-tablet@1x.webp 1x, img/bg-question-tablet@2x.webp 2x">
-            <source media="(min-width:1024px)" srcset="img/bg-question-desktop@1x.jpg 1x, img/bg-question-desktop@2x.jpg 2x">
-            <img src="img/bg-question-tablet@1x.jpg" srcset="img/bg-question-tablet@2x.jpg" width="768" height="466" alt="Вид на море на закате">
-          </picture>
+          <video id="video" src="">
+            <picture>
+              <source type="image/webp" media="(min-width:1024px)" srcset="img/bg-question-desktop@1x.webp 1x, img/bg-question-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-question-tablet@1x.webp 1x, img/bg-question-tablet@2x.webp 2x">
+              <source media="(min-width:1024px)" srcset="img/bg-question-desktop@1x.jpg 1x, img/bg-question-desktop@2x.jpg 2x">
+              <img src="img/bg-question-tablet@1x.jpg" srcset="img/bg-question-tablet@2x.jpg" width="768" height="466" alt="Вид на море на закате">
+            </picture>
+          </video>
         </div>
         <div class="feedback__inner-wrapper">
           <h2 class="feedback__title title">У Вас остались вопросы?</h2>

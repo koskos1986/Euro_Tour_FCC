@@ -143,6 +143,11 @@ img {
           -ms-flex-align: start;
               align-items: flex-start;
       padding: 0; } }
+  @media (min-width: 1024px) {
+    .header {
+      position: fixed;
+      background-color: #ffffff;
+      z-index: 5; } }
 
 .header__wrapper {
   width: 61%;
